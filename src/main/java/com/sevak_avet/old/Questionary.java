@@ -1,4 +1,4 @@
-package com.sevak_avet.domain;
+package com.sevak_avet.old;
 
 import javax.persistence.*;
 
@@ -8,7 +8,7 @@ public class Questionary {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
 
     @Column(name = "question", nullable = false)
     private String question;
@@ -17,11 +17,14 @@ public class Questionary {
         this.question = question;
     }
 
-    public long getId() {
+    public Questionary() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

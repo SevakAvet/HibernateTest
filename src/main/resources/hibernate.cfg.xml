@@ -20,7 +20,7 @@
 
         <mapping class="com.sevak_avet.domain.User"/>
         <mapping class="com.sevak_avet.domain.Answer"/>
-        <mapping class="com.sevak_avet.domain.Questionary"/>
+        <mapping class="com.sevak_avet.old.Questionary"/>
         <mapping class="com.sevak_avet.domain.Topic"/>
 
     </session-factory>

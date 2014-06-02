@@ -8,44 +8,47 @@ public class Topic {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
 
     @Column(name = "user_id")
-    private long userId;
+    private int userId;
 
     @Column(name = "lang_id")
-    private long langId;
+    private int langId;
 
-    @Column(name = "topic", nullable = false)
+    @Column(name = "topic", nullable = false, length = 3000)
     private String topic;
 
-    public Topic(long userId, long langId, String topic) {
+    public Topic(int userId, int langId, String topic) {
         this.userId = userId;
         this.langId = langId;
         this.topic = topic;
     }
 
-    public long getId() {
+    public Topic() {
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public long getLangId() {
+    public int getLangId() {
         return langId;
     }
 
-    public void setLangId(long langId) {
+    public void setLangId(int langId) {
         this.langId = langId;
     }
 

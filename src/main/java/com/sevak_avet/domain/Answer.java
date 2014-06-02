@@ -8,52 +8,78 @@ public class Answer {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private int id;
 
     @Column(name = "user_id")
-    private long userId;
+    private int userId;
 
-    @Column(name = "question_id")
-    private long questionId;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "answer", nullable = false)
-    private int answer;
+    @Column(name = "birthday")
+    private String birthday;
 
-    public Answer(long userId, long questionId, int answer) {
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "faculty")
+    private String faculty;
+
+    public Answer(int userId, String name, String birthday, String gender, String faculty) {
         this.userId = userId;
-        this.questionId = questionId;
-        this.answer = answer;
+        this.name = name;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.faculty = faculty;
     }
 
-    public long getId() {
+    public Answer(){}
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public long getQuestionId() {
-        return questionId;
+    public String getName() {
+        return name;
     }
 
-    public void setQuestionId(long questionId) {
-        this.questionId = questionId;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getAnswer() {
-        return answer;
+    public String getBirthday() {
+        return birthday;
     }
 
-    public void setAnswer(int answer) {
-        this.answer = answer;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
     }
 }
